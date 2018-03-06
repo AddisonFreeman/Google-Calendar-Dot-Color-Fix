@@ -1,0 +1,33 @@
+{
+
+    "manifest_version": 2,
+
+    "name": "Calendar Dots",
+    "description": "Change Dot Color to Reflect Event Tag Color",
+    "version": "0.3",
+
+    "icons": {
+        "16": "img/icon16.png",
+        "19": "img/icon19.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "options_page": "options.html",
+    "content_scripts": [{
+        "matches": ["https://*./*", "*://*./*"],
+        "js": ["/lib/jquery.js", "js/content.js"],
+        "css": ["content.css"]
+    }],
+    "background": {
+      "scripts": ["js/background.js"]
+    },
+    "browser_action": {
+        "default_icon": "img/icon128.png"
+        // "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "https://ajax.googleapis.com/"
+    ]
+}
