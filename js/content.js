@@ -30,8 +30,14 @@ $(document).ready(function() {
         });
 
     }
-    dotChange();
-    $(document).on('click','span, div',function() {
+    setTimeout(function() {
         dotChange();
+    }, 100);
+    
+
+    $(document).on('click','span, div',function() {
+        setTimeout(function() {
+            dotChange();    
+        }, 100);
     })
 });
