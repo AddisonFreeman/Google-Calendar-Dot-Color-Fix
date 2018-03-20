@@ -32,8 +32,11 @@ $(document).ready(function() {
     }
     setTimeout(function() {
         dotChange();
-    }, 100);
-    
+    }, 300);
+
+    setInterval(function() {
+        dotChange();
+    }, 3000);
 
     $(document).on('click','span, div',function() {
         setTimeout(function() {
