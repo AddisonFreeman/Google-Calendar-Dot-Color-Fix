@@ -11,7 +11,7 @@
     },
     "options_page": "options.html",
     "content_scripts": [{
-        "matches": ["https://*./*", "*://*./*"],
+        "matches": ["https://calendar.google.com/*"],
         "js": ["/lib/jquery.js", "js/content.js"],
         "css": ["content.css"]
     }],
